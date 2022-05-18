@@ -1,47 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set()
-import statsmodels as sm
-import time
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn import tree
-from sklearn.tree import DecisionTreeClassifier
-# Importing classifiers
-
-
-from sklearn.model_selection import train_test_split,GridSearchCV
-from sklearn.preprocessing import StandardScaler,LabelEncoder, MinMaxScaler
-#importing for preprocessing methods used for scaler as well as training
-
-
-from sklearn.model_selection import KFold
-from sklearn.model_selection import cross_validate
-#importing cross validation methods
-
-
-
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
-
-import warnings
-warnings.filterwarnings('ignore')
-
-
 # In[3]:
 
 
