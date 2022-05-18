@@ -151,8 +151,12 @@ X['Type of Crop'] = y
 # In[25]:
 
 
+from sklearn.model_selection import train_test_split
+import streamlit as st
+import pandas as pd
 from explainerdashboard import ClassifierExplainer, ExplainerDashboard
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression 
+from sklearn.model_selection import train_test_split
 
 data = X
     
@@ -171,6 +175,12 @@ model.fit(X_train, y_train)
 
 explainer = ClassifierExplainer(model, X_test, y_test)
 ExplainerDashboard(explainer).run()
+
+
+# In[28]:
+
+
+X.to_csv('Xdata.csv', index = False)
 
 
 # In[ ]:
