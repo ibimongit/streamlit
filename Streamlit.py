@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[26]:
+
+
+import pandas as pd
+
+
 # In[3]:
 
 
