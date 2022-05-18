@@ -154,7 +154,7 @@ X['Type of Crop'] = y
 from explainerdashboard import ClassifierExplainer, ExplainerDashboard
 from sklearn.linear_model import LogisticRegression
 
-data = Xdata
+data = X
     
 X = data[['Yield_000_Tonnes', 'mean_temp', 'total_rain', 'Beans_and_peas',
        'Fodder_beet', 'Kale_and_field_cabbage', 'Oilseed_rape', 'Potatoes',
