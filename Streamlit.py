@@ -152,30 +152,29 @@ X
 # In[25]:
 
 
-def app():
-    import streamlit as st
-    import streamlit.components.v1 as components
-    from explainerdashboard import ClassifierExplainer, ExplainerDashboard
-    from sklearn.linear_model import LogisticRegression
-    data = X
-    X = data[['Yield_000_Tonnes', 'mean_temp', 'total_rain', 'Beans_and_peas',
+import streamlit as st
+import streamlit.components.v1 as components
+from explainerdashboard import ClassifierExplainer, ExplainerDashboard
+from sklearn.linear_model import LogisticRegression
+data = X
+X = data[['Yield_000_Tonnes', 'mean_temp', 'total_rain', 'Beans_and_peas',
        'Fodder_beet', 'Kale_and_field_cabbage', 'Oilseed_rape', 'Potatoes',
        'Spring_barley', 'Spring_oats', 'Spring_wheat', 'Sugar_beet',
        'Total_barley', 'Total_oats', 'Total_wheat',
        'Total_wheat,_oats_and_barley', 'Turnips', 'Winter_barley',
        'Winter_oats', 'Winter_wheat']]
-    y = data['Crop_Cat_Id']
-    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
-    model = LogisticRegression()
-    model.fit(X_train, y_train)
-    explainer = ClassifierExplainer(model, X_test, y_test)
+y = data['Crop_Cat_Id']
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
+model = LogisticRegression()
+model.fit(X_train, y_train)
+explainer = ClassifierExplainer(model, X_test, y_test)
     # embed streamlit docs in a streamlit app
-    components.iframe(ExplainerDashboard(explainer).run())
+components.iframe(ExplainerDashboard(explainer).run())
     
-    st.title("This is the machine learning page")
+st.title("This is the machine learning page")
 
-    dashboardurl = 'https://share.streamlit.io/ibimongit/streamlit/main/Streamlit.py'
-    st.components.v1.iframe(dashboardurl, width=None, height=900, scrolling=True)
+dashboardurl = 'https://share.streamlit.io/ibimongit/streamlit/main/Streamlit.py'
+st.components.v1.iframe(dashboardurl, width=None, height=900, scrolling=True)
 
 
 # In[ ]:
