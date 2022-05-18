@@ -31,7 +31,7 @@ ExplainerDashboard(explainer).run()
 
 st.title("This is the machine learning page")
 
-dashboardurl = 'http://127.0.0.1:8050'
+dashboardurl = 'http://10.12.91.165:8050'
 st.components.v1.iframe(dashboardurl, width=None, height=900, scrolling=True)
 
 
