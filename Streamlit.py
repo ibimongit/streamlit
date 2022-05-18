@@ -29,6 +29,11 @@ model.fit(X_train, y_train)
 explainer = ClassifierExplainer(model, X_test, y_test)
 ExplainerDashboard(explainer).run()
 
+st.title("This is the machine learning page")
+
+dashboardurl = 'http://127.0.0.1:8050'
+st.components.v1.iframe(dashboardurl, width=None, height=900, scrolling=True)
+
 
 # In[ ]:
 
