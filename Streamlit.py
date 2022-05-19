@@ -27,7 +27,7 @@ model = LogisticRegression()
 model.fit(X_train, y_train)
 
 explainer = ClassifierExplainer(model, X_test, y_test)
-ExplainerDashboard(explainer).run()
+ExplainerDashboard(explainer,mode='external).run()
 
 
 # In[ ]:
